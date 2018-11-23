@@ -11,6 +11,16 @@
 		4FD6C47A1B754AF1002F9F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */; };
 		4FD6C49F1B755242002F9F90 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C49C1B755242002F9F90 /* RootViewController.swift */; };
 		4FD6C4A01B755242002F9F90 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C49D1B755242002F9F90 /* InitialViewController.swift */; };
+		6BE061B321A8099300AB54EB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE061B121A8099300AB54EB /* MenuViewController.xib */; };
+		6BE061B421A8099300AB54EB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE061B221A8099300AB54EB /* MenuViewController.swift */; };
+		6BE061BD21A809E500AB54EB /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE061B521A809E300AB54EB /* TestViewController.xib */; };
+		6BE061BE21A809E500AB54EB /* ConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE061B621A809E400AB54EB /* ConvertViewController.xib */; };
+		6BE061BF21A809E500AB54EB /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE061B721A809E400AB54EB /* CustomViewController.xib */; };
+		6BE061C021A809E500AB54EB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE061B821A809E400AB54EB /* DetailViewController.swift */; };
+		6BE061C121A809E500AB54EB /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE061B921A809E400AB54EB /* CustomViewController.swift */; };
+		6BE061C221A809E500AB54EB /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE061BA21A809E400AB54EB /* ConvertViewController.swift */; };
+		6BE061C321A809E500AB54EB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE061BB21A809E400AB54EB /* DetailViewController.xib */; };
+		6BE061C421A809E500AB54EB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE061BC21A809E500AB54EB /* TestViewController.swift */; };
 		78A235BD93AB7D080D67CD51 /* Pods_My_IOS_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A29C75280BDF73123F14B4 /* Pods_My_IOS_APP.framework */; };
 		B7168FBC1FACC6F900A48DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */; };
 		B77BD8A321125B510036B284 /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B77BD8A221125B510036B284 /* bootconfig.plist */; };
@@ -27,6 +37,16 @@
 		4FD6C49C1B755242002F9F90 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4FD6C49D1B755242002F9F90 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4FF12F8A1DCA91F5004D9EF9 /* My_IOS_APP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = My_IOS_APP.entitlements; sourceTree = "<group>"; };
+		6BE061B121A8099300AB54EB /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		6BE061B221A8099300AB54EB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6BE061B521A809E300AB54EB /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		6BE061B621A809E400AB54EB /* ConvertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConvertViewController.xib; sourceTree = "<group>"; };
+		6BE061B721A809E400AB54EB /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
+		6BE061B821A809E400AB54EB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6BE061B921A809E400AB54EB /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		6BE061BA21A809E400AB54EB /* ConvertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
+		6BE061BB21A809E400AB54EB /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		6BE061BC21A809E500AB54EB /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		762732C14CFE40A989C3AD70 /* Pods-My_IOS_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My_IOS_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My_IOS_APP/Pods-My_IOS_APP.debug.xcconfig"; sourceTree = "<group>"; };
 		82A29C75280BDF73123F14B4 /* Pods_My_IOS_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_IOS_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../mobile_sdk/SalesforceMobileSDK-iOS/shared/resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
@@ -92,6 +112,16 @@
 				4FD6C49C1B755242002F9F90 /* RootViewController.swift */,
 				4FD6C49D1B755242002F9F90 /* InitialViewController.swift */,
 				4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */,
+				6BE061B221A8099300AB54EB /* MenuViewController.swift */,
+				6BE061B121A8099300AB54EB /* MenuViewController.xib */,
+				6BE061BA21A809E400AB54EB /* ConvertViewController.swift */,
+				6BE061B621A809E400AB54EB /* ConvertViewController.xib */,
+				6BE061B921A809E400AB54EB /* CustomViewController.swift */,
+				6BE061B721A809E400AB54EB /* CustomViewController.xib */,
+				6BE061B821A809E400AB54EB /* DetailViewController.swift */,
+				6BE061BB21A809E400AB54EB /* DetailViewController.xib */,
+				6BE061BC21A809E500AB54EB /* TestViewController.swift */,
+				6BE061B521A809E300AB54EB /* TestViewController.xib */,
 				4F393A281C3C8BCD00B3EA13 /* main.swift */,
 			);
 			name = Classes;
@@ -181,9 +211,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE061BF21A809E500AB54EB /* CustomViewController.xib in Resources */,
 				B77BD8A321125B510036B284 /* bootconfig.plist in Resources */,
+				6BE061BD21A809E500AB54EB /* TestViewController.xib in Resources */,
+				6BE061C321A809E500AB54EB /* DetailViewController.xib in Resources */,
+				6BE061BE21A809E500AB54EB /* ConvertViewController.xib in Resources */,
 				CEA8CA041F071B2300448B51 /* Images.xcassets in Resources */,
 				B7168FBC1FACC6F900A48DB5 /* LaunchScreen.storyboard in Resources */,
+				6BE061B321A8099300AB54EB /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +296,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD6C47A1B754AF1002F9F90 /* AppDelegate.swift in Sources */,
+				6BE061C121A809E500AB54EB /* CustomViewController.swift in Sources */,
+				6BE061B421A8099300AB54EB /* MenuViewController.swift in Sources */,
 				4FD6C49F1B755242002F9F90 /* RootViewController.swift in Sources */,
+				6BE061C021A809E500AB54EB /* DetailViewController.swift in Sources */,
 				4F393A291C3C8BCD00B3EA13 /* main.swift in Sources */,
+				6BE061C221A809E500AB54EB /* ConvertViewController.swift in Sources */,
+				6BE061C421A809E500AB54EB /* TestViewController.swift in Sources */,
 				4FD6C4A01B755242002F9F90 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

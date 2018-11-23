@@ -28,15 +28,25 @@ import SalesforceSDKCore
 
 class RootViewController : UITableViewController
 {
+    
+    struct DeletedItemInfo {
+        var data: [String:Any]
+        var path: IndexPath
+    }
+    
+    private var deleteRequests = [Int:DeletedItemInfo]()
+    private var dataRow : [[String:Any]] = [[:]]
+    
+    
     var dataRows = [Dictionary<String, Any>]()
     
     // MARK: - View lifecycle
     override func loadView()
     {
         super.loadView()
-        self.title = "Mobile SDK Sample App"
-    
-        let request = RestClient.sharedInstance().buildQueryRequest(soql: "SELECT Name FROM User LIMIT 10")
+        self.title = "Leads"
+        
+        let request = RestClient.sharedInstance().buildQueryRequest(soql: "SELECT Name, Id FROM Lead Where IsConverted=false")
         RestClient.sharedInstance().send(request: request, onFailure: { (error, urlResponse) in
             SFSDKLogger.sharedInstance().log(type(of:self), level:.debug, message:"Error invoking: \(request)")
         }) { [weak self] (response, urlResponse) in
@@ -82,5 +92,54 @@ class RootViewController : UITableViewController
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
+    }
+    override func tableView(_ tableView: UITableView,
+                            editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle
+        
+    {
+        if (indexPath.row < self.dataRows.count) {
+            return UITableViewCellEditingStyle.delete
+        } else {
+            return UITableViewCellEditingStyle.none
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let selectedId: String = self.dataRows[row]["Id"] as! String
+        
+        print("resp------\(selectedId)")
+        
+        let vc = DetailViewController()
+        vc.stringPassed = selectedId
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let row = indexPath.row
+        if (row < self.dataRows.count && editingStyle == UITableViewCellEditingStyle.delete)
+        {
+            let deletedId: String = self.dataRows[row]["Id"] as! String
+            let deletedItemInfo = DeletedItemInfo(data: self.dataRows[row], path:indexPath)
+            let restApi = RestClient.sharedInstance()
+            
+            let deleteRequest: RestRequest = restApi.buildDeleteRequest(forObjectType: "Lead", objectId: deletedId)
+            
+            _ = restApi.send(request: deleteRequest, onFailure: { (error, resp) in
+                print(error?.localizedDescription as Any)
+            }, onSuccess: { (any, resp) in
+                DispatchQueue.main.async {
+                    
+                    print("resp------\(String(describing: resp))")
+                    
+                    self.deleteRequests[deleteRequest.hashValue] = deletedItemInfo
+                    self.dataRows.remove(at:row)
+                    self.tableView.reloadData()
+                }
+            })
+            
+            
+        }
     }
 }

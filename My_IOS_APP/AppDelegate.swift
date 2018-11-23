@@ -86,20 +86,20 @@ class AppDelegate : UIResponder, UIApplicationDelegate
         //     SFPushNotificationManager.sharedInstance().registerSalesforceNotifications(completionBlock: nil, fail: nil)
         // }
     }
-
-
+    
+    
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error )
     {
         // Respond to any push notification registration errors here.
     }
-
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
     {
         // Uncomment following block to enable IDP Login flow
         // return  UserAccountManager.sharedInstance().handleIDPAuthenticationResponse(url, options: options)
         return false;
     }
-
+    
     // MARK: - Private methods
     func initializeAppViewState()
     {
@@ -112,11 +112,13 @@ class AppDelegate : UIResponder, UIApplicationDelegate
         
         self.window!.rootViewController = InitialViewController(nibName: nil, bundle: nil)
         self.window!.makeKeyAndVisible()
+        //self.window!.rootViewController = InitialViewController(nibName: nil, bundle: nil)
     }
     
     func setupRootViewController()
     {
-        let rootVC = RootViewController(nibName: nil, bundle: nil)
+        //let rootVC = TestViewController()
+        let rootVC = MenuViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         self.window!.rootViewController = navVC
     }
@@ -129,9 +131,9 @@ class AppDelegate : UIResponder, UIApplicationDelegate
                 return
             }
         }
-
+        
         postResetBlock()
     }
-
+    
     
 }
