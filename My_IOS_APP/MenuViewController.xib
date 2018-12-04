@@ -10,10 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="TrailheadiOSTest" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="My_IOS_APP" customModuleProvider="target">
             <connections>
                 <outlet property="createLeadBtn" destination="HE1-A5-9YS" id="EWO-aO-F2G"/>
                 <outlet property="leadListBtn" destination="vog-kf-8wx" id="cC0-6h-FXu"/>
+                <outlet property="pending" destination="z6C-An-5BM" id="zxo-7x-pNF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,9 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ivory-off-white-paper-texture" translatesAutoresizingMaskIntoConstraints="NO" id="u97-Bs-15Z">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivory-off-white-paper-texture" translatesAutoresizingMaskIntoConstraints="NO" id="u97-Bs-15Z">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE1-A5-9YS">
                     <rect key="frame" x="77.5" y="247" width="220" height="40"/>
@@ -50,13 +50,32 @@
                         <action selector="leadListPage:" destination="-1" eventType="touchUpInside" id="gku-UZ-D2A"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6C-An-5BM">
+                    <rect key="frame" x="77.5" y="400" width="220" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="6xD-Bw-B51"/>
+                        <constraint firstAttribute="height" constant="40" id="DVu-55-1jK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Pending Changes"/>
+                    <connections>
+                        <action selector="leadListPage:" destination="-1" eventType="touchUpInside" id="XEA-8M-C5S"/>
+                        <action selector="pendingChangesPage:" destination="-1" eventType="touchUpInside" id="TcE-UA-Zt6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="z6C-An-5BM" firstAttribute="centerX" secondItem="u97-Bs-15Z" secondAttribute="centerX" id="88n-OW-WLd"/>
                 <constraint firstItem="HE1-A5-9YS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9di-l0-s38"/>
+                <constraint firstItem="u97-Bs-15Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BTb-PM-W2K"/>
+                <constraint firstItem="u97-Bs-15Z" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Ikx-dP-3Rk"/>
                 <constraint firstItem="vog-kf-8wx" firstAttribute="top" secondItem="HE1-A5-9YS" secondAttribute="bottom" constant="41" id="Nu8-4v-vgn"/>
                 <constraint firstItem="HE1-A5-9YS" firstAttribute="centerX" secondItem="vog-kf-8wx" secondAttribute="centerX" id="aEO-Hh-HIn"/>
+                <constraint firstItem="z6C-An-5BM" firstAttribute="top" secondItem="vog-kf-8wx" secondAttribute="bottom" constant="32" id="bdc-P6-YSI"/>
                 <constraint firstItem="HE1-A5-9YS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="227" id="gPz-ss-tVw"/>
+                <constraint firstItem="u97-Bs-15Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nV7-sa-dhc"/>
+                <constraint firstItem="z6C-An-5BM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sF5-Df-ln0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="154.27286356821591"/>

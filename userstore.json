@@ -1,0 +1,13 @@
+{  "soups": [
+    {
+      "soupName": "lead",
+      "indexes": [
+        { "path": "Id", "type": "string"},
+        { "path": "Name", "type": "string"},
+        { "path": "Company", "type": "string"},
+        { "path": "Status", "type": "string"},
+        { "path": "Title", "type": "string"}
+      ]
+    }
+  ]
+}
